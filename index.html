@@ -1,0 +1,54 @@
+<html>
+
+<head>
+
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <h1>Cloud Cafe</h1>
+
+    <div class="content">
+
+        <form id="add-cafe-form">
+
+            <input type="text" name="name" placeholder="cafe name">
+            <input type="text" name="city" placeholder="cafe city">
+            <button>Add cafe</button>
+        </form>
+
+        <ul id="cafe-list"></ul>
+
+    </div>
+
+
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyB77Z67P2fh-XFWc8_yGRwBGeJnUQxMufA",
+            authDomain: "myrezume-a59a2.firebaseapp.com",
+            databaseURL: "https://myrezume-a59a2.firebaseio.com",
+            projectId: "myrezume-a59a2",
+            storageBucket: "myrezume-a59a2.appspot.com",
+            messagingSenderId: "768870513359",
+            appId: "1:768870513359:web:e05f51ac8bbba66e7ed5ba",
+            measurementId: "G-MG1JHGXQ8H"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        const db = firebase.firestore();
+        db.settings({ timestampsInSnapshots: true });
+
+    </script>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
